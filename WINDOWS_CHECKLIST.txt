@@ -1,0 +1,30 @@
+PUBLISHER ACCEPTANCE CHECK — CMT ASSET MANAGER 1.1.2
+
+Automated source checks are performed during the build. The bundled EXE is
+also checked with disposable data before the installer is compiled.
+The following native Windows checks must be completed on the actual build.
+
+[ ] Install under a normal Windows account; no administrator prompt.
+[ ] Launch from desktop and Start menu; no console window appears.
+[ ] Clean install creates an empty workspace and asks for an administrator.
+[ ] The desktop window opens; no browser tab or separate control window appears.
+[ ] Resize/maximize/minimize; relaunch restores the previous window geometry.
+[ ] Launching the shortcut twice does not start another server.
+[ ] Create/edit a record, assign it, attach a picture and PDF, view both.
+[ ] PDFs display their pages and photos appear full size in document windows.
+[ ] Print an asset, save Excel/CSV/backup, and use native upload file pickers.
+[ ] Appearance presets/custom color/light/dark and startup theme work.
+[ ] User roles, sign-out, user deletion and password recovery work.
+[ ] Download a backup, stage restore, close the app, relaunch and verify it.
+[ ] Close the main window with PDF windows open; all windows and server stop.
+[ ] While running, installer and uninstaller ask you to close the program.
+[ ] Back up records, stop the app, reinstall the same setup as an update;
+     verify records, accounts, files and preferences remain.
+[ ] Uninstall, confirm data remains, reinstall and verify records return.
+[ ] On a second Windows 10/11 x64 PC or clean VM without Python or Docker,
+     install and use the program without an internet connection.
+[ ] Inspect the release: no personal records, backups or credentials included.
+
+Only distribute after these checks pass. Keep a note of the Windows versions,
+installer SHA256 and any issues observed. The Linux preparation environment
+does not establish native Windows installation or GUI behavior.

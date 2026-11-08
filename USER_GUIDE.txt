@@ -1,0 +1,92 @@
+CMT ASSET MANAGER 1.1.2
+Cyber Matt Technologies | https://cybermatt.tech
+
+GETTING STARTED
+Install CMT Asset Manager and launch it from the desktop or Start menu.
+Create your administrator account on first launch. There are no default
+credentials. Keep your password somewhere safe.
+
+The program opens in its own desktop window. Resize, maximize or minimize it
+like other Windows programs. Close the main window or choose File / Exit to
+stop the program safely. There is no separate browser tab or control window.
+This application runs only on this PC.
+
+EQUIPMENT
+Choose Equipment and add a record with a unique asset tag and description.
+Photos, receipts, manuals and warranty files can be attached to each record.
+PDFs and full-size photos open in document windows inside the application.
+Other documents, exports and backups use a native Save dialog.
+Equipment previews use small cached images for fast repeated selections.
+Click a photo to open its full-resolution original. Existing uploads work
+without re-uploading. Previews are generated on first use and held in memory;
+they are not added to backups or written over the original images. Use Edit or Move / Reassign to set an assignee.
+Changing an asset to Available keeps its assignee unless you explicitly
+select Clear assignment in the status dialog.
+
+ACCOUNTS AND APPEARANCE
+Administrators manage application accounts in Workspace / People & access.
+Standard users can manage equipment; read-only users can view and export it.
+These accounts do not enable access from other PCs or other Windows profiles.
+Each Windows profile has its own inventory by default.
+Appearance includes presets, a custom accent, and light/dark/system modes.
+The desktop workspace remembers the last saved theme for the sign-in screen.
+Menus also follow the current light/dark appearance and accent.
+
+DATA, UPDATES AND UNINSTALL
+Data folder:
+  %LOCALAPPDATA%\Cyber Matt Technologies\CMT Asset Manager\data
+Log folder:
+  %LOCALAPPDATA%\Cyber Matt Technologies\CMT Asset Manager\logs
+
+Use File / Open data folder to locate your records. Inventory, accounts, preferences
+and uploaded files are separate from the installed program. Updates reuse the
+same data folder. Stop the program before installing an update. Take a full
+backup before updating. Uninstalling preserves your data. Reinstalling under
+the same Windows profile reconnects to it.
+
+BACKUP AND RESTORE
+In Workspace / Backup & recovery, download a full backup regularly and store
+it somewhere separate from this PC. It includes records, user accounts,
+password hashes, appearance preferences, history, lists and attachments.
+Backups and the database are not encrypted by this application.
+
+To restore, choose a CMT backup and enter your current administrator password.
+After it is staged, close the main application window, then launch
+the application again. Sign in using an account/password from that backup.
+The previous inventory is preserved in data\safety before replacement.
+Restore replaces the entire inventory; it does not merge records.
+
+MOVING FROM AN EARLIER CMT VERSION
+1. Open the earlier program and download a full backup from it.
+2. Keep the original backup ZIP and the earlier program folder.
+3. Stop the earlier program before launching the installed application.
+4. Create an administrator in the installed application if prompted.
+5. Restore the backup, stop/relaunch, and sign in with your previous account.
+6. Verify your records, pictures, documents, assignments and appearance.
+The installer does not search for or move existing databases automatically.
+
+LARGER BACKUPS
+The restore dialog accepts up to 200 MB compressed and 2 GB expanded. To restore
+a larger ZIP within the 2 GB expanded limit, stop the program and copy the ZIP
+to the data folder as pending-restore.zip, then launch the program. The same
+validation and safety snapshot apply. Retain the original backup ZIP.
+
+FORGOTTEN ADMINISTRATOR PASSWORD
+First ask another administrator to reset it. If none is available, stop the
+program and use Start menu / CMT Asset Manager / Recover administrator password.
+Enter an existing administrator username and a new password twice. This is
+local recovery for someone who already controls the Windows profile/files.
+It does not create new administrators and it records a recovery event.
+
+TROUBLESHOOTING
+Port 8766 in use: stop the earlier CMT application or conflicting program.
+The release does not open an earlier version by mistake.
+To refresh the workspace, choose View / Refresh or press Ctrl+R.
+Startup failure: retain the data folder and application log; do not delete the
+database or reinstall over data to troubleshoot.
+Expired session: sign in again. Unsaved changes may need to be reentered.
+
+THIRD-PARTY SOFTWARE
+Python, Qt/PySide and dependency notices are included under _internal\third_party in
+the installation folder. The publisher's build inventory is included there.
+The installer is built with Inno Setup: https://jrsoftware.org

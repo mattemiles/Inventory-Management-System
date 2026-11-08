@@ -1,0 +1,38 @@
+QT / PYSIDE DESKTOP COMPONENTS
+
+CMT Asset Manager uses the shared Qt and PySide6 desktop libraries, version
+6.11.2, without modifications to those libraries. They are loaded dynamically
+from the installation's _internal directory, rather than statically linked
+into the application. The application's Python desktop source is provided in
+the accompanying CMT source/build ZIP.
+
+Qt and PySide components used by this application are available under the GNU
+Lesser General Public License, version 3, along with applicable notices and
+third-party licenses. LGPL-3.0.txt and GPL-3.0.txt are included in the licenses
+folder and in the installed third_party folder. Qt WebEngine incorporates
+Chromium and additional third-party components with their own notices.
+
+Corresponding source for the unmodified library versions is available from
+the original Qt project, including its submodule sources:
+
+  PySide6 / Shiboken6:
+  https://code.qt.io/cgit/pyside/pyside-setup.git/?h=v6.11.2
+
+  Qt 6.11.2 sources, including Qt Base and Qt WebEngine:
+  https://code.qt.io/cgit/qt/qt5.git/?h=v6.11.2
+  https://download.qt.io/official_releases/qt/6.11/6.11.2/single/
+
+  Qt licensing and third-party attributions:
+  https://doc.qt.io/qt-6/licensing.html
+  https://doc.qt.io/qt-6/qtwebengine-licensing.html
+
+You may replace the LGPL-covered shared libraries with compatible modified
+versions and debug those modifications. Nothing in the CMT application notices
+restricts reverse engineering for debugging such library modifications.
+The publisher should retain the corresponding source versions and keep the
+above source information available with the distributed installer/source ZIP.
+
+The release publisher's dependency inventory and original package notices are
+in _internal/third_party. Additional Qt attributions can be consulted through
+the official Qt WebEngine licensing page above. Qt and PySide are products of
+their respective copyright holders; no endorsement is implied.

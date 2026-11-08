@@ -1,0 +1,73 @@
+BUILD YOUR WINDOWS INSTALLER
+CMT Asset Manager 1.1.2
+
+This is the publisher build package, NOT an already compiled installer.
+Build once on your Windows PC. People who receive your finished Setup EXE
+will not need Python, Inno Setup, Docker, or this source folder.
+
+1. Extract this entire ZIP to a regular local folder, for example:
+   C:\CMT-Build\CMT_Asset_Manager
+   Do not run the build from inside the ZIP or from your existing inventory
+   program directory. This package contains no inventory or user accounts.
+
+2. On the BUILD PC only, install:
+   - Standard 64-bit Python 3.12, including the py launcher.
+     https://www.python.org/downloads/windows/
+   - Inno Setup 6.3 or newer (6 or 7).
+     https://jrsoftware.org/isdl.php
+   Your existing 64-bit Python 3.12 installation should work.
+
+3. Double-click BUILD_INSTALLER.bat.
+   Internet access is needed to install build dependencies. The script creates
+   its own .build-venv, runs automated checks, bundles the program, checks that
+   bundled executable using disposable data, and compiles the installer.
+   No live inventory is used by the build checks. A temporary desktop window
+   opens, checks itself, and closes during the build. This is expected.
+   The bundled desktop engine makes the download/build larger than 1.1.0.
+
+4. Find the result under output:
+   CMT_Asset_Manager_Setup_1.1.2.exe
+   SHA256SUMS.txt
+   BUILD_INFO.json
+
+5. Install the EXE and complete WINDOWS_CHECKLIST.txt on Windows before
+   publishing it. Keep your current working program and a full backup while
+   you check the installed version. See USER_GUIDE.txt for migration.
+
+DISTRIBUTION
+Distribute the Setup EXE and SHA256SUMS.txt, not your data folder, build
+environment, or personal backups. The setup installs for the current Windows
+user without requesting administrator privileges. It includes Python and the
+dependencies and runs offline after installation.
+
+This package has no Test/Beta labels in the program or installed shortcuts.
+The tests folder is developer validation code; it is not bundled in the app.
+
+The initial build is unsigned. Windows may show an unknown-publisher or
+reputation prompt. Code signing can be added to a later publisher build.
+Do not tell users to disable security software. If a build is blocked, retain
+the exact detection and resolve it before sharing that build.
+
+If the build fails, send the displayed error. The build stops on failed checks.
+If Inno Setup is installed somewhere unusual, set CMT_ISCC to the full path
+to ISCC.exe, or open installer\CMT_Asset_Manager.iss in Inno Setup after a
+successful application build and choose Compile.
+
+UPDATING AN INSTALLED 1.1.0 OR 1.1.1 VERSION
+Back up your inventory and close the current application (or its control window
+if you are using 1.1.0). Build this package in a
+new folder, then install the new 1.1.2 Setup EXE over the existing installation.
+The installer uses the same application ID and data location. Your records and
+uploads stay in place. Sign in when the desktop window opens; there is no need
+to restore a backup unless you are migrating from a separate source folder.
+
+The installer includes the desktop engine. No Edge/WebView2 download is needed
+on recipient PCs. See QT_NOTICES.txt for bundled-library notices and source
+links; make the source ZIP produced in output available with your release.
+
+PHOTO PERFORMANCE UPDATE
+Version 1.1.2 uses bounded, in-memory photo previews instead of full-resolution
+files in the equipment header/gallery. Your originals stay untouched.
+The first preview is generated on demand; repeated selections reuse it.
+The desktop check now reselects equipment with a 4000-pixel photo repeatedly
+and verifies that the preview is small while the full original opens on click.
